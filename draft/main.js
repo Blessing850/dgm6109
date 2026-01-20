@@ -1,9 +1,4 @@
 "use strict"
-let posX = 100;
-let posY = 200;
-let speedX = 2;
-let speedY =2;
-
 
 /*  Variable that enables you to "talk to" your SVG drawing canvas. */
 let drawing = d3.select("#canvas")
