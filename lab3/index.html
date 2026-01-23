@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab #3</title>
+</head>
+
+<body>
+  <h1>Lab #3</h1>
+
+  <p>Convert a temperature from Fahrenheit to Celsius or Kelvin.</p>
+
+  <p>
+    <label for="inputF">Temperature in Fahrenheit:</label>
+    <input type="text" id="inputF">
+  </p>
+
+  <p>
+    Choose a conversion:
+    <select id="conversionChoice">
+      <option value="c">Celsius</option>
+      <option value="k">Kelvin</option>
+    </select>
+  </p>
+
+  <button id="submit">Convert Temperature</button>
+
+  <!-- REQUIRED for output.js -->
+  <div id="output"></div>
+
+  <!-- output.js MUST come before main.js -->
+  <script src="output.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
