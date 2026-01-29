@@ -1,0 +1,106 @@
+/* ================================
+   styles.css
+   Exercise: CSS Styling (Snippet 02)
+   Student: Blessing Amadi
+
+   This stylesheet styles HTML elements created in the previous exercise.
+   Resources used include MDN Web Docs and CSS-Tricks to understand spacing,
+   hover/focus states, and responsive text widths.
+   ================================ */
+
+
+/* -------------------------------
+   Global styles
+   -------------------------------
+   Changed the default font using a system font stack.
+   Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
+*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  margin: 2rem;
+}
+
+
+/* -------------------------------
+   Spacing between elements
+   -------------------------------
+   Added space between headings, paragraphs, and images
+   using margin to improve readability.
+   Resource: https://css-tricks.com/almanac/properties/m/margin/
+*/
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+img {
+  margin-bottom: 1.5rem;
+}
+
+
+/* -------------------------------
+   Paragraph width and responsiveness
+   -------------------------------
+   Shortened the line length of paragraphs using max-width
+   so text is easier to read, while still shrinking on small screens.
+   Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/max-width
+*/
+p {
+  max-width: 60ch;
+}
+
+
+/* -------------------------------
+   In-text link styling
+   -------------------------------
+   Styled links with a base color and added hover and focus
+   states for accessibility and interactivity.
+   Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/:hover
+   Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/:focus
+*/
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #cc0000;
+  text-decoration: underline;
+}
+
+
+/* -------------------------------
+   Image link hover and focus styling
+   -------------------------------
+   Added a hover and focus effect to images inside links
+   using transform and opacity for visual feedback.
+   Resource: https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+*/
+a img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+a:hover img,
+a:focus img {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+
+/* -------------------------------
+   Figure and caption styling
+   -------------------------------
+   Centered the figure content and slightly styled the caption.
+   Resource: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure
+*/
+figure {
+  max-width: 300px;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: #555;
+}
