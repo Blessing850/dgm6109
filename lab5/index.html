@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Blessing Chizarum Amadi Lab #5 - Winter 2026</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Your drawing -->
+    <script src="elements/frog.js"></script>
+
+    <!-- Classmate examples (remove or replace with downloaded files) -->
+    <script src="elements/caterpillar.js"></script>
+    <script src="elements/butterfly.js"></script>
+    <script src="elements/lion.js"></script>
+
+</head>
+
+<body>
+    <h2>Lab 5 Drawing Assignment</h2>
+
+    <!-- First element -->
+    <p>
+        Select the first element:
+        <select id="choice1">
+            <option value="frog">Frog</option>
+            <option value="caterpillar">Caterpillar</option>
+            <option value="drawButterfly">Butterfly</option>
+            <option value="lion">Lion</option>
+
+        </select>
+    </p>
+    <p>Position: x:<input type="number" id="x1" value="100">, y:<input type="number" id="y1" value="300"></p>
+
+    <!-- Second element -->
+    <p>
+        Select the second element:
+        <select id="choice2">
+            <option value="frog">Frog</option>
+            <option value="caterpillar">Caterpillar</option>
+            <option value="drawButterfly">Butterfly</option>
+            <option value="lion">Lion</option>
+
+        </select>
+    </p>
+    <p>Position: x:<input type="number" id="x2" value="300">, y:<input type="number" id="y2" value="300"></p>
+
+    <!-- Show origin points -->
+    <p>
+        Show origin points:
+        <select id="origins">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+    </p>
+
+    <button id="action">Draw!</button>
+
+    <div id="canvas"></div>
+
+    <!-- Main JS -->
+    <script src="main.js"></script>
+</body>
+
+</html>
