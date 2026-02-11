@@ -1,0 +1,126 @@
+/* ==========================================
+   style.css — Snippet 03
+   Student: Blessing Amadi
+
+   Responsive layouts created using CSS Grid.
+   Mobile-first approach.
+
+   Screen Sizes:
+   - Mobile: 320px+ (default)
+   - Desktop: 1024px+
+   - Large Screens: 1920px+
+
+   Resources used:
+   - MDN Web Docs: CSS Grid Layout
+     https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout
+   - MDN Web Docs: Media Queries
+     https://developer.mozilla.org/en-US/docs/Web/CSS/@media
+   - CSS-Tricks: Complete Guide to Grid
+     https://css-tricks.com/snippets/css/complete-guide-grid/
+========================================== */
+
+
+/* ===== Base Styles (Mobile First 320px+) ===== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* Navigation */
+nav {
+    background: #222;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+}
+
+/* Sections */
+header,
+section {
+    padding: 1.5rem;
+}
+
+p {
+    max-width: 60ch;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Form */
+form {
+    display: grid;
+    gap: 0.75rem;
+}
+
+input,
+select,
+button {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+/* ===== Desktop Layout (1024px+) ===== */
+
+@media (min-width: 1024px) {
+
+    body {
+        grid-template-columns: 250px 1fr;
+    }
+
+    nav {
+        grid-column: 1;
+        grid-row: 1 / -1;
+        height: 100vh;
+    }
+
+    header,
+    section {
+        grid-column: 2;
+        padding: 2rem 3rem;
+    }
+}
+
+/* ===== Large Screen Layout (1920px+) ===== */
+
+@media (min-width: 1920px) {
+
+    body {
+        max-width: 1600px;
+        margin: 0 auto;
+        grid-template-columns: 300px 1fr;
+    }
+
+    header,
+    section {
+        padding: 3rem 4rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+}
