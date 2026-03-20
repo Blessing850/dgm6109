@@ -1,0 +1,173 @@
+[
+  {
+    "date": "Feb 4",
+    "bedtime": "10:30pm",
+    "wakeTime": "8:05am",
+    "hoursSlept": 10,
+    "timeToFallAsleep": 25,
+    "sleepQuality": 5,
+    "notes": "I woke to good news."
+  },
+  {
+    "date": "Feb 5",
+    "bedtime": "10:50pm",
+    "wakeTime": "6:55am",
+    "hoursSlept": 8,
+    "timeToFallAsleep": 5,
+    "sleepQuality": 3,
+    "notes": "I had a less stressful day"
+  },
+  {
+    "date": "Feb 6",
+    "bedtime": "11:00pm",
+    "wakeTime": "7:10am",
+    "hoursSlept": 8,
+    "timeToFallAsleep": 50,
+    "sleepQuality": 4,
+    "notes": "It was my birthday and I had a very good day"
+  },
+  {
+    "date": "Feb 7",
+    "bedtime": "10:55pm",
+    "wakeTime": "6:00am",
+    "hoursSlept": 8,
+    "timeToFallAsleep": 5,
+    "sleepQuality": 5,
+    "notes": "I didn't have very tasking and exhausting activities"
+  },
+  {
+    "date": "Feb 8",
+    "bedtime": "11:10pm",
+    "wakeTime": "6:30am",
+    "hoursSlept": 8,
+    "timeToFallAsleep": 20,
+    "sleepQuality": 2,
+    "notes": "I was involved in long hours of cooking"
+  },
+  {
+    "date": "Feb 9",
+    "bedtime": "10:05pm",
+    "wakeTime": "8:25am",
+    "hoursSlept": 10,
+    "timeToFallAsleep": 30,
+    "sleepQuality": 5,
+    "notes": "I woke up feeling really energized"
+  },
+  {
+    "date": "Feb 10",
+    "bedtime": "11:35pm",
+    "wakeTime": "7:05am",
+    "hoursSlept": 8,
+    "timeToFallAsleep": 20,
+    "sleepQuality": 3,
+    "notes": "I stayed back after classes to finish assignments"
+  },
+  {
+    "date": "Feb 11",
+    "bedtime": "10:00pm",
+    "wakeTime": "7:30am",
+    "hoursSlept": 9,
+    "timeToFallAsleep": 30,
+    "sleepQuality": 4,
+    "notes": "I had a good day and didn't have much physical engagements"
+  },
+  {
+    "date": "Feb 12",
+    "bedtime": "3:15am",
+    "wakeTime": "11:05am",
+    "hoursSlept": 8,
+    "timeToFallAsleep": 40,
+    "sleepQuality": 1,
+    "notes": "I couldn't sleep, possibly emotional stress"
+  },
+  {
+    "date": "Feb 13",
+    "bedtime": "2:35am",
+    "wakeTime": "10:15am",
+    "hoursSlept": 8,
+    "timeToFallAsleep": 10,
+    "sleepQuality": 2,
+    "notes": "I was awake planning a surprise"
+  },
+  {
+    "date": "Feb 14",
+    "bedtime": "4:10am",
+    "wakeTime": "10:10am",
+    "hoursSlept": 6,
+    "timeToFallAsleep": 40,
+    "sleepQuality": 1,
+    "notes": "Valentine’s day"
+  },
+  {
+    "date": "Feb 15",
+    "bedtime": "1:02am",
+    "wakeTime": "10:08am",
+    "hoursSlept": 9,
+    "timeToFallAsleep": 50,
+    "sleepQuality": 5,
+    "notes": "Felt energized and optimistic"
+  },
+  {
+    "date": "Feb 16",
+    "bedtime": "3:30am",
+    "wakeTime": "9:10am",
+    "hoursSlept": 6,
+    "timeToFallAsleep": 20,
+    "sleepQuality": 1,
+    "notes": "Removing braids was exhausting"
+  },
+  {
+    "date": "Feb 17",
+    "bedtime": "2:20am",
+    "wakeTime": "9:15am",
+    "hoursSlept": 7,
+    "timeToFallAsleep": 25,
+    "sleepQuality": 2,
+    "notes": "Woke up with body pains"
+  },
+  {
+    "date": "Feb 18",
+    "bedtime": "9:45pm",
+    "wakeTime": "7:05am",
+    "hoursSlept": 10,
+    "timeToFallAsleep": 10,
+    "sleepQuality": 5,
+    "notes": "Very good night rest"
+  },
+  {
+    "date": "Feb 19",
+    "bedtime": "10:00pm",
+    "wakeTime": "7:05am",
+    "hoursSlept": 9,
+    "timeToFallAsleep": 5,
+    "sleepQuality": 5,
+    "notes": "Felt energized"
+  },
+  {
+    "date": "Feb 20",
+    "bedtime": "11:05pm",
+    "wakeTime": "8:30am",
+    "hoursSlept": 9,
+    "timeToFallAsleep": 25,
+    "sleepQuality": 4,
+    "notes": "Mild headache"
+  },
+  {
+    "date": "Feb 21",
+    "bedtime": "2:30am",
+    "wakeTime": "8:20am",
+    "hoursSlept": 6,
+    "timeToFallAsleep": 10,
+    "sleepQuality": 1,
+    "notes": "Did not get good rest"
+  },
+  {
+    "date": "Feb 22",
+    "bedtime": "4:00am",
+    "wakeTime": "7:45am",
+    "hoursSlept": 3,
+    "timeToFallAsleep": 15,
+    "sleepQuality": 1,
+    "notes": "Felt exhausted and unmotivated"
+  }
+]
