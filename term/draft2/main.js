@@ -6,7 +6,7 @@ let svgHeight = 900
 let margin = {
     top: 80,
     right: 220,
-    bottom: 140,
+    bottom: 100,
     left: 100
 }
 
@@ -19,7 +19,7 @@ let svg = d3.select("#canvas")
     .attr("height", svgHeight)
 
 let viz = svg.append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    .attr("transform", `translate(${margin.left},${margin.top})`)
 
 let tooltip = d3.select("#tooltip")
 
@@ -34,11 +34,6 @@ let xScale, yScale, rScale, colorScale
 })();
 
 // ---------------- ORGANIZE DATA ----------------
-/*
-Function: organizeData
-Purpose: Converts raw data into usable format and assigns bedtime categories
-Returns: Array of formatted data objects
-*/
 function organizeData(data) {
 
     return data.map(function(d) {
@@ -97,7 +92,6 @@ function buildScales(data) {
 // ---------------- DRAW ----------------
 function drawVisualization(data) {
 
-    // AXES
     let xAxis = d3.axisBottom(xScale)
         .tickValues([3,4,5,6,7,8,9,10])
         .tickFormat(d3.format("d"))
@@ -108,18 +102,17 @@ function drawVisualization(data) {
 
     viz.append("g")
         .attr("class", "axis")
-        .attr("transform", "translate(0," + height + ")")
+        .attr("transform", `translate(0, ${height + 20})`)
         .call(xAxis)
 
     viz.append("g")
         .attr("class", "axis")
         .call(yAxis)
 
-    // AXIS LABELS
     viz.append("text")
         .attr("class", "axisLabel")
         .attr("x", width / 2)
-        .attr("y", height + 90)
+        .attr("y", height + 60)
         .attr("text-anchor", "middle")
         .text("Hours Slept (hours)")
 
@@ -131,58 +124,46 @@ function drawVisualization(data) {
         .attr("text-anchor", "middle")
         .text("Sleep Quality (1–5)")
 
-    // JITTER FUNCTION
     function jitter() {
         return (Math.random() - 0.5) * 12
     }
 
-    // SORT (small circles drawn on top)
     data.sort(function(a, b) {
         return b.minutesAwake - a.minutesAwake
     })
 
-    // CIRCLES
     viz.selectAll("circle")
         .data(data)
         .enter()
         .append("circle")
-        .attr("cx", function(d) {
-            return xScale(d.hours) + jitter()
-        })
-        .attr("cy", function(d) {
-            return yScale(d.quality) + jitter()
-        })
-        .attr("r", function(d) {
-            return rScale(d.minutesAwake)
-        })
-        .attr("fill", function(d) {
-            return colorScale(d.bedtimeCategory)
-        })
+        .attr("cx", function(d) { return xScale(d.hours) + jitter() })
+        .attr("cy", function(d) { return yScale(d.quality) + jitter() })
+        .attr("r", function(d) { return rScale(d.minutesAwake) })
+        .attr("fill", function(d) { return colorScale(d.bedtimeCategory) })
         .attr("stroke", "black")
         .attr("stroke-width", 1)
-        .attr("opacity", 0.7)
+        .attr("opacity", 0.75)
 
-        // TOOLTIP
-        .on("mouseover", function(event, d) {
+        .on("mouseover", function (event, d) {
             tooltip
                 .style("opacity", 1)
                 .html(
-                    "<strong>" + d.date + "</strong><br>" +
-                    "Bedtime: " + d.bedtime + "<br>" +
-                    "Hours Slept: " + d.hours + "<br>" +
-                    "Sleep Quality: " + d.quality + "<br>" +
-                    "Minutes Awake: " + d.minutesAwake + "<br>" +
-                    "<em>" + d.notes + "</em>"
+                    `<strong>${d.date}</strong><br>
+                    Bedtime: ${d.bedtime}<br>
+                    Hours Slept: ${d.hours}<br>
+                    Sleep Quality: ${d.quality}<br>
+                    Minutes Awake: ${d.minutesAwake}<br>
+                    <em>${d.notes}</em>`
                 )
         })
 
-        .on("mousemove", function(event) {
+        .on("mousemove", function (event) {
             tooltip
                 .style("left", (event.pageX + 15) + "px")
                 .style("top", (event.pageY - 20) + "px")
         })
 
-        .on("mouseout", function() {
+        .on("mouseout", function () {
             tooltip.style("opacity", 0)
         })
 
@@ -196,7 +177,7 @@ function drawLegend() {
 
     let legend = svg.append("g")
         .attr("class", "legend")
-        .attr("transform", "translate(" + legendX + ",370)")
+        .attr("transform", `translate(${legendX},370)`)
 
     legend.append("text")
         .text("Bedtime")
@@ -225,10 +206,9 @@ function drawLegend() {
         .attr("y", function(d, i) { return i * 30 + 14 })
         .text(function(d) { return d.label })
 
-    // SIZE LEGEND
     let sizeLegend = svg.append("g")
         .attr("class", "legend")
-        .attr("transform", "translate(" + legendX + ",550)")
+        .attr("transform", `translate(${legendX},550)`)
 
     sizeLegend.append("text")
         .text("Minutes Awake")
@@ -245,10 +225,11 @@ function drawLegend() {
         .attr("fill", "gray")
         .attr("opacity", 0.6)
 
-    sizeLegend.selectAll("text")
+    sizeLegend.selectAll("text.sizeLabel")
         .data(sizes)
         .enter()
         .append("text")
+        .attr("class", "sizeLabel")
         .attr("x", 45)
         .attr("y", function(d, i) { return i * 70 + rScale(d) + 5 })
         .attr("dominant-baseline", "middle")
