@@ -73,11 +73,11 @@ function organizeData(data) {
 function buildScales(data) {
 
     xScale = d3.scaleLinear()
-        .domain([3, 10])
+        .domain([0, 10])
         .range([0, width])
 
     yScale = d3.scaleLinear()
-        .domain([1, 5])
+        .domain([0, 5])
         .range([height, 0])
 
     rScale = d3.scaleSqrt()
@@ -93,16 +93,16 @@ function buildScales(data) {
 function drawVisualization(data) {
 
     let xAxis = d3.axisBottom(xScale)
-        .tickValues([3,4,5,6,7,8,9,10])
+        .tickValues([0,1,2,3,4,5,6,7,8,9,10])
         .tickFormat(d3.format("d"))
 
     let yAxis = d3.axisLeft(yScale)
-        .tickValues([1,2,3,4,5])
+        .tickValues([0, 1,2,3,4,5])
         .tickFormat(d3.format("d"))
 
     viz.append("g")
         .attr("class", "axis")
-        .attr("transform", `translate(0, ${height + 20})`)
+        .attr("transform", `translate(0, ${height})`)
         .call(xAxis)
 
     viz.append("g")
